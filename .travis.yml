@@ -15,10 +15,10 @@ after_success:
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push 33142308/fibonnaci-client:latest
-    - docker push 33142308/fibonnaci-nginx:latest
-    - docker push 33142308/fibonnaci-server:latest
-    - docker push 33142308/fibonnaci-worker:latest
+    - docker push docker.io/33142308/fibonnaci-client:latest
+    - docker push docker.io/33142308/fibonnaci-nginx:latest
+    - docker push docker.io/33142308/fibonnaci-server:latest
+    - docker push docker.io/33142308/fibonnaci-worker:latest
 
 
 
