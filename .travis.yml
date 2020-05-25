@@ -8,10 +8,10 @@ script:
     - docker run 33142308/fibonnaci-calc npm test -- --coverage
 
 after_success:
-    - docker build . -t 3142308/fibonnaci-client ./client 
-    - docker build . -t 3142308/fibonnaci-nginx ./nginx 
-    - docker build . -t 3142308/fibonnaci-server ./server 
-    - docker build . -t 3142308/fibonnaci-worker ./worker
+    - docker build --tag 3142308/fibonnaci-client ./client 
+    - docker build --tag 3142308/fibonnaci-nginx ./nginx 
+    - docker build --tag 3142308/fibonnaci-server ./server 
+    - docker build --tag 3142308/fibonnaci-worker ./worker
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
