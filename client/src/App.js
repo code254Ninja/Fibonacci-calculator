@@ -17,6 +17,7 @@ class App extends Component {
             <Route exact path="/" component={Fib} />
             <Route path="/otherpage" component={OtherPage} />
           </div>
+          <h1>Simon Kihara</h1>
         </div>
       </Router>
     );
